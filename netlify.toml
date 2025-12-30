@@ -1,0 +1,12 @@
+# Netlify configuration
+[build]
+  publish = "build/web"
+  command = "flutter build web --release"
+
+[build.environment]
+  FLUTTER_ROOT = "/opt/buildhome/.flutter"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
